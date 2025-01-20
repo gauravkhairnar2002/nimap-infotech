@@ -20,6 +20,7 @@ public class Categories {
   private String name;
 
   @OneToMany(mappedBy = "categories", cascade = CascadeType.ALL, orphanRemoval = true)
+  @JsonIgnore
   private Set<Products> products;
 
 
